@@ -1,0 +1,22 @@
+@use '../utility/' as *;
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(36);
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        @include breakpoint-down(small) {
+            flex-grow: 1;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--card-background);
+        }
+    }   
+    
+    &__subtitle {
+        font-size: rem(14);
+        color: var(--small-text);
+    }
+}

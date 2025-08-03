@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="stylesheet" href="/dist/style.css">
+  <script defer src="/dist/script.js"></script>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body> 
+  <header class="header container">
+    <div class="header__title">
+      <h1>Social Media Dashboard</h1>
+      <span class="header__subtitle">Total Followers: 23,004</span>
+    </div>
+
+    <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
+      <label for="switcher"></label>
+      <div class="toggle__wrapper">
+        <input type="checkbox" id="switcher">
+        <div aria-hidden="true" class="toggle__background"></div>
+        <div aria-hidden="true" class="toggle__button"></div>
+      </div>
+    </fieldset>
+  </header>
+  <main>
+    <div aria-hidden="true" class="topbg"></div>
+    <section class="container">
+      <div class="cards total">
+        <div class="card card--facebook">
+          <div class="card__platform">
+              <img alt="facebook logo" src="images/icon-facebook.svg" class="card__icon">
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__counts">1987</div>
+          <div class="card__unit">Followers</div>
+          <div class="card__change card__change--increase">12 Today</div>
+        </div>
+        <div class="card card--twitter">
+          <div class="card__platform">
+            <img alt="twitter logo" src="images/icon-twitter.svg" class="card__icon">
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__counts">1044</div>
+          <div class="card__unit">Followers</div>
+          <div class="card__change card__change--increase">99 Today</div>
+        </div>
+        <div class="card card--instagram">
+          <div class="card__platform">
+            <img alt="instagram logo" src="images/icon-instagram.svg" class="card__icon">
+            <div class="card__username">@realnathanf</div>
+          </div>
+          <div class="card__counts">11k</div>
+          <div class="card__unit">Followers</div>
+          <div class="card__change card__change--increase">1099 Today</div>
+        </div>
+        <div class="card card--youtube">
+          <div class="card__platform">
+            <img alt="youtube logo" src="images/icon-youtube.svg" class="card__icon">
+            <div class="card__username">Nathan F.</div>
+          </div>
+          <div class="card__counts">8239</div>
+          <div class="card__unit">Subscribers</div>
+          <div class="card__change card__change--decrease">144 Today</div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Overview - Today</h2>
+      <div class="cards overview">
+        <div class="card">
+          <div class="card__interaction">Page Views</div>
+          <img src="images/icon-facebook.svg" alt="facebook logo" class="card__icon">
+          <div class="card__counts">87</div>
+          <div class="card__change card__change--increase">3%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Likes</div>
+          <img src="images/icon-facebook.svg" alt="facebook logo" class="card__icon">
+          <div class="card__counts">52</div>
+          <div class="card__change card__change--decrease">2%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Likes</div>
+          <img src="images/icon-instagram.svg" alt="instagram logo" class="card__icon">
+          <div class="card__counts">5462</div>
+          <div class="card__change card__change--increase">2257%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Profile Views</div>
+          <img src="images/icon-instagram.svg" alt="instagram logo" class="card__icon">
+          <div class="card__counts">52k</div>
+          <div class="card__change card__change--increase">1375%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Retweets</div>
+          <img src="images/icon-twitter.svg" alt="twitter logo" class="card__icon">
+          <div class="card__counts">117</div>
+          <div class="card__change card__change--increase">303%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Likes</div>
+          <img src="images/icon-twitter.svg" alt="twitter logo" class="card__icon">
+          <div class="card__counts">507</div>
+          <div class="card__change card__change--increase">553%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Likes</div>
+          <img src="images/icon-youtube.svg" alt="youtube logo" class="card__icon">
+          <div class="card__counts">107</div>
+          <div class="card__change card__change--decrease">19%</div>
+        </div>
+        <div class="card">
+          <div class="card__interaction">Total Views</div>
+          <img src="images/icon-youtube.svg" alt="youtube logo" class="card__icon">
+          <div class="card__counts">1407</div>
+          <div class="card__change card__change--decrease">12%</div>
+        </div>
+      </div>
+    </section>
+  </main>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Vichet Nao</a>.
+  </div>
+</body>
+</html>

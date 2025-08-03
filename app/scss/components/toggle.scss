@@ -1,0 +1,82 @@
+@use '../utility/' as *;
+
+.toggle {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+    gap: rem(12);
+
+    @include breakpoint-down(small) {
+        flex-grow: 1;
+        justify-content: space-between;
+        margin-top: 20px
+    }
+
+    label{
+        cursor: pointer;
+        line-height: rem(24);
+
+        &::after {
+            content: "Dark Mode"
+        }
+
+        &:has(~ .toggle__wrapper input[type="checkbox"]:checked)::after{
+            content: "Light Mode";
+        }
+    }
+
+    &__wrapper{
+        width: rem(48);
+        height: rem(24);
+        position: relative;
+
+        &:hover .toggle__button {
+            background-color: var(--toggle-wrapper-hover);
+        }
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        margin: 0;
+        opacity: 0;
+
+        &:checked ~ .toggle__button {
+            left: calc(50% + #{rem(3)})
+        }
+    }
+
+    &__background {
+        height: 100%;
+        width: 100%;
+        background: var(--toggle-background);
+        border-radius: rem(12);
+        overflow: hidden;
+        pointer-events: none;
+    }               
+
+    &__button {
+        box-sizing: content-box;
+        background-color: var(--toggle-button);
+        border-radius: 50%;
+        width: rem(18);
+        height: rem(18);
+        padding: 0;
+        position: absolute; 
+        left: rem(3);
+        top: rem(3);
+        transition: left 0.3s ease-out;
+        pointer-events: none;
+    }
+}
+
+body.light .toggle__wrapper {
+    &:hover .toggle__background {
+        background: var(--toggle-wrapper-hover);
+    }   
+
+    &:hover .toggle__button {
+        background-color: var(--toggle-button);
+    }
+}

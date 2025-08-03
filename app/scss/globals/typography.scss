@@ -1,0 +1,23 @@
+@use '../utility' as *;
+
+h1, h2{
+    color: var(--big-text);
+    margin: 0px;
+    line-height: 1.1;
+}
+
+body.light h2 {
+    color: var(--small-text);
+    margin-bottom: rem(24);
+}
+
+h1{
+    font-size: rem(28);  
+    margin-bottom: rem(3);
+    @include breakpoint-down(mobile) {
+        font-size: rem(24);         
+    }
+}
+a, a:visited, a:active{
+    text-decoration: none;
+}
